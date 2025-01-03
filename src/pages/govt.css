@@ -1,0 +1,113 @@
+/*  */
+
+/* Branding */
+.branding h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.branding h1 span {
+    color: var(--secondary-color);
+}
+
+.branding p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* Plan Section */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+/* Plan Container */
+.plan-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Info Box (for each pension plan) */
+.info-box {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Plan Title */
+.info-box h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Paragraphs */
+.info-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Requirements and Eligibility Lists */
+.info-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.info-box ul li {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+/* Button */
+.apply-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: var(--button-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-duration), transform var(--transition-duration);
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.apply-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .plan-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-box {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}

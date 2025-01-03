@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --primary-color: #d28dff; /* Original vibrant blue color */
+    --secondary-color: #ff3e41; /* Original vibrant red color for hover effects */
+    --text-dark: #333; /* Dark gray for text */
+    --text-light: #9a9a9a; /* Light gray for softer text */
+    --background-light: #f0f4f8; /* Light background for content */
+    --white: #fe8787; /* White */
+    --footer-background: #0080ff; /* Original dark footer background */
+    --button-radius: 12px; /* More rounded buttons */
+    --transition-duration: 0.3s; /* Smooth transition for hover effects */
+    --nav-list-color: #04005a; /* Original blue color for navigation links */
+    --max-width: 8000px; /* Maximum width for the content */
+}
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.7;
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+    width: 100%;
+    overflow-x: hidden;
+    padding-top: 80px; /* Space for sticky header */
+}
+
+/* Header Styles */
+.header {
+    background: var(--primary-color); /* Use original primary color */
+    color: var(--white); /* White text color */
+    padding: 20px 0;
+    text-align: center;
+    position: sticky; /* Sticky positioning */
+    top: 0; /* Stick to the top of the page */
+    z-index: 1000; /* Ensure it's above other elements */
+    width: 100%; /* Ensure the header spans full width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.container {
+    width: 100%; /* Ensure the container takes up the full width */
+    padding: 0 20px;
+}
+
+/* Header Title */
+.header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    color: var(--white); /* White text */
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* Navigation Styles */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Align nav items in a row */
+    justify-content: flex-start; /* Align to the left */
+    align-items: center;
+    gap: 20px; /* Space between links */
+    text-align: left; /* Ensure text aligns to the left */
+}
+
+.nav-list li {
+    margin: 0;
+}
+
+.nav-list a {
+    color: var(--nav-list-color); /* Original nav link color */
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: color var(--transition-duration) ease;
+    padding: 10px 15px;
+    border-radius: var(--button-radius);
+}
+
+.nav-list a:hover {
+    color: var(--white);
+    background: var(--secondary-color); /* Use original hover color */
+}
+
+.nav-list .logout-button {
+    background: var(--secondary-color); /* Original logout button color */
+    color: var(--white);
+    padding: 10px 15px;
+    font-size: 1em;
+    font-weight: 500;
+    border: none;
+    border-radius: var(--button-radius);
+    cursor: pointer;
+    transition: background var(--transition-duration) ease, transform 0.2s ease;
+}
+
+.nav-list .logout-button:hover {
+    background: #e74c3c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
+}
+
+/* Carousel container */
+.carousel-wrapper {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.carousel .slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: var(--button-radius);
+    margin-top: 40px;
+    margin-bottom: 400px;
+}
+
+/* Blog Cards */
+.hero .blog {
+    padding: 50px;
+    margin-bottom: 30px;
+    background-color: var(--background-light);
+    border-radius: var(--button-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    min-height: 300px;
+}
+
+/* Hover Effect for Blog Cards */
+.hero .blog:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Styles for Hero */
+.hero h2 {
+    font-size: 2.4em;
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    color: var(--black);
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+/* Carousel Controls and Status */
+.hero .carousel .control-arrow {
+    display: none;
+}
+
+.hero .carousel .carousel-status {
+    display: none;
+}
+
+/* Styling for alternating background colors in Blog */
+.hero .blog:nth-child(odd) {
+    background-color: #95baf7;
+}
+
+.hero .blog:nth-child(even) {
+    background-color: var(--white);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.2em;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    .nav-list li {
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        width: 95%;
+        padding: 60px 10px;
+    }
+
+    .hero h2 {
+        font-size: 2.4em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .services-nav {
+        padding: 40px 10px;
+    }
+
+    .services-title {
+        font-size: 2em;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .hero h2 {
+        font-size: 2.0em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .nav-list .logout-button {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}
+
+/* Services Navigation Boxes */
+.services-nav {
+    padding: 60px 20px;
+    background-color: var(--background-light);
+    text-align: center;
+    border-radius: var(--button-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.services-title {
+    font-size: 2.5em;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-box {
+    flex: 1 1 calc(25% - 40px);
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--button-radius);
+    color: var(--text-dark);
+    font-size: 1.4em;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-box img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: var(--button-radius);
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.service-box a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.service-box a:hover {
+    color: inherit;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    background: var(--footer-background); /* Original footer color */
+    color: var(--white);
+    padding: 30px 0;
+    margin-top: 40px;
+    font-size: 1em;
+    border-radius: var(--button-radius) var(--button-radius) 0 0;
+}

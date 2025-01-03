@@ -1,0 +1,151 @@
+/* Header Styles */
+/* header {
+  background: linear-gradient(135deg, #4361ee, #f86060);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-bottom: 3px solid #3f37c9;
+  width: 100%;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+} */
+
+.branding {
+  text-align: left;
+}
+
+.branding h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.branding span {
+  color: #f86060;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.branding p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-link:hover {
+  background-color: #3f37c9;
+  transform: translateY(-3px);
+}
+
+/* Main Section Styles */
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+main p {
+  font-size: 1.2rem;
+  color: #8d99ae;
+  margin-bottom: 30px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card Styles */
+.card {
+  flex: 1 1 calc(33% - 40px);
+  max-width: 300px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 20px;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 22px;
+  color: #4361ee;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 16px;
+  color: #8d99ae;
+}
+
+.card .explore-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #4361ee;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.card .explore-link:hover {
+  background: #3f37c9;
+  transform: translateY(-3px);
+}
+
+/* Footer Styles */
+footer {
+  margin-top: 50px;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #ffffff;
+  background: #3f37c9;
+  text-align: center;
+}

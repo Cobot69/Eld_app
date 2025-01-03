@@ -1,0 +1,256 @@
+/* pensionstyle.css */
+
+/* Root Variables */
+/* :root {
+    --primary-color: #4caf50;
+    --secondary-color: #81c784;
+    --accent-color: #388e3c;
+    --background-color: #f5f5f5;
+    --text-primary: #333333;
+    --text-secondary: #757575;
+    --white: #ffffff;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* General Styles */
+/* body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+} */
+
+/* Header Styles */
+/* .header {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+} */
+
+/* .header .branding h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+} */ */
+
+.header .branding h1 span {
+    color: var(--accent-color);
+}
+
+.header .navbar a {
+    text-decoration: none;
+    color: var(--white);
+    margin: 0 15px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.header .navbar a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+/* Calculator Section */
+.calculator {
+    background: var(--white);
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.calculator h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.calculator form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.calculator label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.calculator input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    outline: none;
+    transition: var(--transition);
+}
+
+.calculator input:focus {
+    border-color: var(--primary-color);
+}
+
+.calculator button {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.calculator button:hover {
+    background: var(--accent-color);
+}
+
+/* Plan Cards */
+.plan-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.plan-card {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.plan-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.plan-card p {
+    color: var(--text-secondary);
+    margin: 5px 0;
+}
+
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    color: var(--text-primary);
+}
+
+.plan-card ul li {
+    margin-bottom: 5px;
+}
+
+.plan-card .explore-button {
+    text-decoration: none;
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.plan-card .explore-button:hover {
+    background: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .plan-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .plan-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Button Styles */
+button, .explore-button {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 12px 24px; /* Increased padding for better touch targets */
+    border: none;
+    border-radius: 8px; /* Consistent border radius */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+button:hover, .explore-button:hover {
+    background: var(--accent-color);
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Card Styles */
+.card, .plan-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .plan-card:hover {
+    transform: translateY(-5px); /* Elevation effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .plan-card {
+        flex: 1 1 calc(50% - 20px); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .plan-card {
+        flex: 1 1 100%; /* Stack cards on very small screens */
+    }
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif; /* Ensure consistent font */
+}
+
+h1 {
+    font-size: 2.6rem; /* Adjust size for main headings */
+    color: var(--primary-color); /* Consistent color */
+}
+
+h2 {
+    font-size: 2rem; /* Adjust size for subheadings */
+    color: var(--secondary-color); /* Consistent color */
+}
+
+p {
+    font-size: 1rem; /* Consistent paragraph font size */
+    color: var(--text-dark); /* Consistent text color */
+}
+
+.error-message {
+    color: rgb(209, 7, 7); /* Highlight error messages */
+    font-weight: bold;
+    font-size:x-large;
+}

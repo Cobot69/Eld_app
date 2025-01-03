@@ -1,0 +1,174 @@
+/* :root {
+  --primary-color: #4361ee;
+  --secondary-color: #3f37c9;
+  --accent-color: #f86060;
+  --text-dark: #2b2d42;
+  --text-light: #8d99ae;
+  --background-light: #f8f9fa;
+  --white: #ffffff;
+  --gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+} */
+.grocery {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9fc;
+    color: #333333;
+  }
+  
+  /* Header Section */
+  /* .header {
+    text-align: center;
+    margin-bottom: 40px;
+    background: linear-gradient(135deg, #4d27ae, #e2284d);
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+   */
+  .header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  /* Back Button */
+  .back-button {
+    padding: 12px 20px;
+    background-color: #d35400;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+  }
+  
+  .back-button:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px);
+  }
+  
+  /* Dropdown Styling */
+  .area-select {
+    padding: 12px;
+    border: 2px solid #dce4ec;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+/*   
+  .area-select:hover {
+    border-color: #2ecc71;
+    box-shadow: 0 0 8px rgba(46, 204, 113, 0.2);
+  }
+  
+  .area-select:focus {
+    border-color: #27ae60;
+    outline: none;
+  }
+   */
+  /* Store List Layout */
+  .store-list {
+    display: flex;
+    flex-direction: column; /* Ensures cards are stacked vertically */
+    align-items: stretch; /* Makes each card take the full width of the container */
+    gap: 30px; /* Space between the cards */
+    padding: 20px 0;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%; /* Ensures the container fits within its parent */
+  }
+  
+  /* Store Card Styling */
+  .store-card {
+    display: block; /* Ensures each card behaves like a block element */
+    width: 100%; /* Makes the card take up full width of the parent container */
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow for a professional look */
+    padding: 30px; /* Generous padding for a spacious feel */
+    border: 1px solid rgba(67, 97, 238, 0.2); /* Slightly darker border for emphasis */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .store-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced hover effect for polish */
+  }
+  
+  /* Store Card Content Styling */
+  .store-card h3 {
+    color: #27ae60;
+    margin: 0 0 20px; /* Spacing below the heading */
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .store-card p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.6; /* Improved readability */
+  }
+  
+  .store-card strong {
+    color: #333333;
+  }
+  
+  /* Action Button Styling */
+  .action-button {
+    display: inline-block;
+    padding: 12px 18px; /* Slightly larger button for better usability */
+    background-color: #2ecc71;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem; /* Increased font size for better visibility */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  .action-button:hover {
+    background-color: #27ae60;
+    transform: translateY(-3px);
+  }
+  
+  .action-button:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(46, 204, 113, 0.5);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 2.2rem;
+    }
+  
+    .area-select {
+      max-width: 100%;
+    }
+  
+    .store-list {
+      padding: 15px;
+      gap: 20px; /* Adjust gap for smaller screens */
+    }
+  
+    .store-card {
+      padding: 20px; /* Adjust padding for smaller screens */
+    }
+  }
+  

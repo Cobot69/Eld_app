@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Ensure the body takes up the full width */
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+.App {
+  width: 100%; /* Ensure the App takes up the full width */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+nav {
+  text-align: center;
+  margin: 20px 0;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
